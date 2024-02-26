@@ -21,14 +21,14 @@
                         <i class="icon fa fa-check"></i> Perubahan berhasil disimpan
                     </div>
                     <div class="form-group row">
-                        <label for="nama_perusahaan" class="col-lg-2 control-label">Nama Perusahaan</label>
+                        <label for="nama_perusahaan" class="col-lg-2 control-label">Nama Usaha</label>
                         <div class="col-lg-6">
                             <input type="text" name="nama_perusahaan" class="form-control" id="nama_perusahaan" required autofocus>
                             <span class="help-block with-errors"></span>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="telepon" class="col-lg-2 control-label">Telepon</label>
+                        <label for="telepon" class="col-lg-2 control-label">Telp</label>
                         <div class="col-lg-6">
                             <input type="text" name="telepon" class="form-control" id="telepon" required>
                             <span class="help-block with-errors"></span>
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="path_logo" class="col-lg-2 control-label">Logo Perusahaan</label>
+                        <label for="path_logo" class="col-lg-2 control-label">Logo Mu</label>
                         <div class="col-lg-4">
                             <input type="file" name="path_logo" class="form-control" id="path_logo"
                                 onchange="preview('.tampil-logo', this.files[0])">
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="path_kartu_member" class="col-lg-2 control-label">Kartu Member</label>
+                        <label for="path_kartu_member" class="col-lg-2 control-label">Member</label>
                         <div class="col-lg-4">
                             <input type="file" name="path_kartu_member" class="form-control" id="path_kartu_member"
                                 onchange="preview('.tampil-kartu-member', this.files[0], 300)">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <div class="box-footer text-right">
-                    <button class="btn btn-sm btn-flat btn-primary"><i class="fa fa-save"></i> Simpan Perubahan</button>
+                    <button class="btn btn-sm btn-flat btn-primary"><i class="fa fa-save"></i> Simpan</button>
                 </div>
             </form>
         </div>
