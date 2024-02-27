@@ -24,8 +24,10 @@
                     @enderror
                 </div>
                 <div class="form-group has-feedback @error('password') has-error @enderror">
-                    <input type="password" name="password" id="password-field" class="form-control" placeholder="Password" required>
-                    <span class="glyphicon glyphicon-eye-open field-icon toggle-password" style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></span>
+                    <input type="password" name="password" id="password-field" class="form-control" placeholder="Password"
+                        required>
+                    <span class="glyphicon glyphicon-eye-open field-icon toggle-password"
+                        style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></span>
                     <!-- Tambahkan style untuk menempatkan ikon mata di dalam kotak password -->
                     @error('password')
                         <span class="help-block">{{ $message }}</span>
@@ -33,7 +35,7 @@
                         <span class="help-block with-errors"></span>
                     @enderror
                 </div>
-                
+
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
                         document.querySelector('.toggle-password').addEventListener('click', function() {
@@ -60,7 +62,7 @@
                 </div> --}}
                     <!-- /.col -->
                     <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Masuk</button>
                     </div>
                     <!-- /.col -->
                 </div>

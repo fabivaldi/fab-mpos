@@ -1,12 +1,12 @@
 @extends('layouts.master')
 
 @section('title')
-    Edit Profil
+    Profil
 @endsection
 
 @section('breadcrumb')
     @parent
-    <li class="active">Edit Profil</li>
+    <li class="active">Master Profil</li>
 @endsection
 
 @section('content')

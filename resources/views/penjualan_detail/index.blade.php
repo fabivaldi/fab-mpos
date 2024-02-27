@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Transaksi Penjualan
+    Transaksi Baru
 @endsection
 
 @push('css')
@@ -33,7 +33,7 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Transaksi Baru</li>
+    <li class="active">Master Transaksi Baru</li>
 @endsection
 
 @section('content')
