@@ -70,7 +70,7 @@
                         </li>
                         <li>
                             <a href="{{ route('pembelian.index') }}">
-                                <i class="fa fa-download"></i> <span>Transaksi Pembelian</span>
+                                <i class="fa fa-download"></i> <span>Master Pembelian</span>
                             </a>
                         </li>
                         <li>

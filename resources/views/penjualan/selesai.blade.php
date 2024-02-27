@@ -6,7 +6,7 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Master Penjualan</li>
+    <li class="active">Monitoring Penjualan</li>
 @endsection
 
 @section('content')
