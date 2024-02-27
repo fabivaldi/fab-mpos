@@ -75,7 +75,7 @@
                         </li>
                         <li>
                             <a href="{{ route('penjualan.index') }}">
-                                <i class="fa fa-upload"></i> <span>Transaksi Penjualan</span>
+                                <i class="fa fa-upload"></i> <span>Monitoring Penjualan</span>
                             </a>
                         </li>
                         <li>
