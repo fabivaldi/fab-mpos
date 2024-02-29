@@ -47,11 +47,11 @@
                                 <i class="fa fa-id-card"></i> <span>Master Member</span>
                             </a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="{{ route('supplier.index') }}">
                                 <i class="fa fa-truck"></i> <span>Master Supplier</span>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </li>
                 <li class="treeview">
@@ -78,19 +78,19 @@
                                 <i class="fa fa-upload"></i> <span>Monitoring Penjualan</span>
                             </a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="{{ route('transaksi.index') }}">
                                 <i class="fa fa-cart-arrow-down"></i> <span>Riwayat Transaksi</span>
                             </a>
-                        </li>
-                        <li>
+                        </li> --}}
+                        {{-- <li>
                             <a href="{{ route('transaksi.baru') }}">
                                 <i class="fa fa-cart-arrow-down"></i> <span>Transaksi Baru</span>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </li>
-                <li class="header">REPORT</li>
+                {{-- <li class="header">REPORT</li> --}}
                 <li>
                     <a href="{{ route('laporan.index') }}">
                         <i class="fa fa-file-pdf-o"></i> <span>Master Laporan</span>
@@ -118,11 +118,11 @@
                     </ul>
                 </li>
             @else
-                <li>
+                {{-- <li>
                     <a href="{{ route('transaksi.index') }}">
                         <i class="fa fa-cart-arrow-down"></i> <span>Riwayat Transaksi</span>
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="{{ route('transaksi.baru') }}">
                         <i class="fa fa-cart-arrow-down"></i> <span>Transaksi Baru</span>

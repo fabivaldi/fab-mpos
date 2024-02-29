@@ -23,8 +23,8 @@ class UserController extends Controller
             ->addColumn('aksi', function ($user) {
                 return '
                 <div class="btn-group">
-                    <button type="button" onclick="editForm(`'. route('user.update', $user->id) .'`)" class="btn btn-xs btn-info btn-flat"><i class="fa fa-pencil"></i></button>
-                    <button type="button" onclick="deleteData(`'. route('user.destroy', $user->id) .'`)" class="btn btn-xs btn-danger btn-flat"><i class="fa fa-trash"></i></button>
+                    <button type="button" onclick="editForm(`' . route('user.update', $user->id) . '`)" class="btn btn-xs btn-info btn-flat"><i class="fa fa-pencil"></i></button>
+                    <button type="button" onclick="deleteData(`' . route('user.destroy', $user->id) . '`)" class="btn btn-xs btn-danger btn-flat"><i class="fa fa-trash"></i></button>
                 </div>
                 ';
             })
@@ -50,8 +50,21 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        // $request->validate([
+        //     'password' => [
+        //         'required',
+        //         'min:12',
+        //         'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$/',
+        //     ],
+        // ]);
+
         $user = new User();
         $user->name = $request->name;
+        $user->gender = $request->gender;
+        $user->placebirth = $request->placebirth;
+        $user->datebirth = $request->datebirth;
+        $user->address = $request->address;
+        $user->phone = $request->phone;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
         $user->level = 2;
@@ -60,7 +73,6 @@ class UserController extends Controller
 
         return response()->json('Data berhasil disimpan', 200);
     }
-
     /**
      * Display the specified resource.
      *
@@ -96,8 +108,13 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->name = $request->name;
+        $user->gender = $request->gender;
+        $user->placebirth = $request->placebirth;
+        $user->datebirth = $request->datebirth;
+        $user->address = $request->address;
+        $user->phone = $request->phone;
         $user->email = $request->email;
-        if ($request->has('password') && $request->password != "") 
+        if ($request->has('password') && $request->password != "")
             $user->password = bcrypt($request->password);
         $user->update();
 
@@ -126,7 +143,7 @@ class UserController extends Controller
     public function updateProfil(Request $request)
     {
         $user = auth()->user();
-        
+
         $user->name = $request->name;
         if ($request->has('password') && $request->password != "") {
             if (Hash::check($request->old_password, $user->password)) {

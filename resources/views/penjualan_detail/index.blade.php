@@ -53,7 +53,7 @@
                                     <input type="text" class="form-control" name="kode_produk" id="kode_produk">
                                     <span class="input-group-btn">
                                         <button onclick="tampilProduk()" class="btn btn-info btn-flat" type="button"><i
-                                                class="fa fa-arrow-right"></i></button>
+                                                class="fa fa-arrow-right text-success"></i></button>
                                     </span>
                                 </div>
                             </div>
@@ -75,8 +75,8 @@
 
                     <div class="row">
                         <div class="col-lg-8">
-                            <div class="tampil-bayar bg-primary"></div>
-                            <div class="tampil-terbilang"></div>
+                            <div class="tampil-bayar bg-green"></div>
+                            {{-- <div class="tampil-terbilang"></div> --}}
                         </div>
                         <div class="col-lg-4">
                             <form action="{{ route('transaksi.simpan') }}" class="form-penjualan" method="post">
@@ -328,9 +328,9 @@
             $.get(`{{ url('/transaksi/loadform') }}/${diskon}/${$('.total').text()}/${diterima}`)
                 .done(response => {
                     $('#totalrp').val('Rp. ' + response.totalrp);
-                    $('#bayarrp').val('Rp. ' + response.bayarrp);
+                    $('#bayarrp').val('Rp. ' + response.bayar);
                     $('#bayar').val(response.bayar);
-                    $('.tampil-bayar').text('Bayar: Rp. ' + response.bayarrp);
+                    $('.tampil-bayar').text('Bayar: Rp. ' + response.bayar);
                     $('.tampil-terbilang').text(response.terbilang);
 
                     $('#kembali').val('Rp.' + response.kembalirp);

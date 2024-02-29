@@ -22,6 +22,11 @@
                         <thead>
                             <th width="5%">No</th>
                             <th>Nama</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Tempat Lahir</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Alamat</th>
+                            <th>Nomor Telepon</th>
                             <th>Email</th>
                             <th width="15%"><i class="fa fa-cog"></i></th>
                         </thead>
@@ -54,6 +59,21 @@
                     },
                     {
                         data: 'name'
+                    },
+                    {
+                        data: 'gender'
+                    },
+                    {
+                        data: 'placebirth'
+                    },
+                    {
+                        data: 'datebirth'
+                    },
+                    {
+                        data: 'address'
+                    },
+                    {
+                        data: 'phone'
                     },
                     {
                         data: 'email'
@@ -89,6 +109,14 @@
             $('#modal-form form').attr('action', url);
             $('#modal-form [name=_method]').val('post');
             $('#modal-form [name=name]').focus();
+            $('#modal-form [name=gender]').focus();
+            $('#modal-form [name=placebirth]').focus();
+            $('#modal-form [name=datebirth]').focus();
+            $('#modal-form [name=address]').focus();
+            $('#modal-form [name=phone]').focus();
+
+
+
 
             $('#password, #password_confirmation').attr('required', true);
         }
@@ -101,12 +129,28 @@
             $('#modal-form form').attr('action', url);
             $('#modal-form [name=_method]').val('put');
             $('#modal-form [name=name]').focus();
+            $('#modal-form [name=gender]').focus();
+            $('#modal-form [name=placebirth]').focus();
+            $('#modal-form [name=datebirth]').focus();
+            $('#modal-form [name=address]').focus();
+            $('#modal-form [name=phone]').focus();
+
+
+
+
+
 
             $('#password, #password_confirmation').attr('required', false);
 
             $.get(url)
                 .done((response) => {
                     $('#modal-form [name=name]').val(response.name);
+                    $('#modal-form [name=gender]').val(response.gender);
+                    $('#modal-form [name=placebirth]').val(response.placebirth);
+                    $('#modal-form [name=datebirth]').val(response.datebirth);
+                    $('#modal-form [name=address]').val(response.address);
+                    $('#modal-form [name=phone]').val(response.phone);
+
                     $('#modal-form [name=email]').val(response.email);
                 })
                 .fail((errors) => {
